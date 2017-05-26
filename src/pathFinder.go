@@ -34,7 +34,7 @@ func (this *PathFinder) findPath() *ServerNodePath {
 				node:         nearByNode.node,
 				totalLatency: totalLatency,
 				history:      &PathHistory{openListItem.node, openListItem.history},
-				priority:     totalLatency + int(this.destination.realDistance(nearByNode.node)),
+				priority:     (totalLatency * LATENCY_PRIORITY_HURISTIC_MODIFIER) + int(this.destination.realDistance(nearByNode.node)),
 				index:        -1,
 			})
 		}

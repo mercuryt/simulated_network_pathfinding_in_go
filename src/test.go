@@ -31,7 +31,7 @@ func main() {
 		serverNodeMap.addServerNode(index+1, std.name, std.latitude, std.longitude)
 	}
 
-	serverNodeMap.setLatency("Moscow", "Beijing", 1000)
+	//serverNodeMap.setLatency("Moscow", "Beijing", 1000)
 	serverNodeMap.printNode("Moscow")
 	serverNodeMap.printNode("Beijing")
 
